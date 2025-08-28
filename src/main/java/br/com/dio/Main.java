@@ -40,24 +40,24 @@ public class Main {
             System.out.println("14 - Sair  ");
             var option = scanner.nextInt();
             switch (option){
-                case 1: createAccount();
-                case 2: createInvestment();
-                case 3: createWalletInvestment();
-                case 4: deposit();
-                case 5: withdraw();
-                case 6: transferToAccount();
-                case 7: incInvestment();
-                case 8: rescueInvestment();
-                case 9: accountRepository.list().forEach(System.out::println);
-                case 10: investmentRepository.list().forEach(System.out::println);
-                case 11: investmentRepository.listWallets().forEach(System.out::println);
-                case 12: {
+                case 1 -> createAccount();
+                case 2 -> createInvestment();
+                case 3 ->createWalletInvestment();
+                case 4 -> deposit();
+                case 5 -> withdraw();
+                case 6 -> transferToAccount();
+                case 7 -> incInvestment();
+                case 8 -> rescueInvestment();
+                case 9 -> accountRepository.list().forEach(System.out::println);
+                case 10 ->  investmentRepository.list().forEach(System.out::println);
+                case 11 -> investmentRepository.listWallets().forEach(System.out::println);
+                case 12 -> {
                     investmentRepository.updateAmount();
                     System.out.println("Investimentos reajustados");
                 }
-                case 13: checkHistory();
-                case 14: System.exit(0);
-                default:
+                case 13 -> checkHistory();
+                case 14 -> System.exit(0);
+                default ->
                     System.out.println("Opcao invalida");
             }
         }

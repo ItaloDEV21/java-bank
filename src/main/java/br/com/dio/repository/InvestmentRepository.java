@@ -31,7 +31,7 @@ public class InvestmentRepository {
            var accountsInUse = wallets.stream().map(InvestmentWallet::getAccount).toList();
 
            if (accountsInUse.contains(account)) {
-               throw new AccountWithInvestmentException(" A conta " + account + "já possui um investimento  ");
+               throw new AccountWithInvestmentException(" A conta " + account + "ja possui um investimento  ");
            }
        }
         var investment = findById(id);
